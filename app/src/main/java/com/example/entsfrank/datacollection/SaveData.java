@@ -14,32 +14,34 @@ import com.example.entsfrank.datacollection.DatabaseHelper;
  */
 public class SaveData extends AsyncTask<Object,Void,Long> {
     private DatabaseHelper helper;
-    private String title, description, association, purpose, time, reminder;
+    private String name, age, gender, university, job, salary, company;
 
-    public SaveData(Context context, String title,
-                    String description, String association,
-                    String purpose, String time,
-                    String reminder
+    public SaveData(Context context, String s, String name,
+                    String age, String gender,
+                    String university, String job,
+                    String salary, String company
     ){
         this.helper = new DatabaseHelper(context);
-        this.title = title;
-        this.description=description;
-        this.association =association;
-        this.purpose =purpose;
-        this.time =time;
-        this.reminder=reminder;
+        this.name = name;
+        this.age=age;
+        this.gender =gender;
+        this.university =university;
+        this.job =job;
+        this.salary=salary;
+        this.company=company;
     }
 
     @Override
     protected Long doInBackground(Object... objects) {
         SQLiteDatabase db = helper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(DataEntry.COLUMN_TITLE, title);
-        values.put(DataEntry.COLUMN_DESCRIPTION, description);
-        values.put(DataEntry.COLUMN_ASSOCIATION, association);
-        values.put(DataEntry.COLUMN_PURPOSE, purpose);
-        values.put(DataEntry.COLUMN_TIME, time);
-        values.put(DataEntry.COLUMN_REMINDER, reminder);
+        values.put(DataEntry.COLUMN_NAME, name);
+        values.put(DataEntry.COLUMN_AGE, age);
+        values.put(DataEntry.COLUMN_GENDER, gender);
+        values.put(DataEntry.COLUMN_UNIVERSITY, university);
+        values.put(DataEntry.COLUMN_JOB, job);
+        values.put(DataEntry.COLUMN_SALARY, salary);
+        values.put(DataEntry.COLUMN_COMPANY, company);
 
         long newRowId = db.insert(
                 DataEntry.TABLE_NAME,

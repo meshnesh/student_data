@@ -54,6 +54,7 @@ public class InfoFragment extends Fragment {
                 association.setText(event.getAssociation());
                 time.setText(event.getTime());
                 reminder.setText(event.getReminder());
+                company.setText(event.get_company());
                 setHasOptionsMenu(true);
             } else {
                 title.setText("No events created on this date");

@@ -9,67 +9,55 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/new_call_title"
-            android:hint="Title"/>
+            android:id="@+id/new_name"
+            android:hint="Name"/>
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/new_call_description"
-            android:hint="Description"/>
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/new_call_association"
-            android:hint="Association"/>
+            android:id="@+id/new_age"
+            android:hint="Age"/>
+
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/generateCallPurpose"
-                android:text="Purpose"
+                android:id="@+id/generateGender"
+                android:text="Gender"
                 android:drawableRight="@android:drawable/arrow_down_float"/>
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:id="@+id/new_call_purpose"/>
+                android:id="@+id/new_gender"/>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@android:drawable/ic_menu_my_calendar"
-                android:id="@+id/generateCallTimePicker"
-                android:text="Time"/>
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:layout_marginStart="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/new_call_time" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@android:drawable/ic_menu_my_calendar"
-                android:id="@+id/generateCallReminderPicker"
-                android:text="Reminder"/>
-            <TextView
-                android:layout_marginLeft="15dp"
-                android:layout_marginStart="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/new_call_reminder" />
-        </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_university"
+            android:hint="University"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_dream_job"
+            android:hint="Dream Job"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_salary"
+            android:hint="Dream Salary"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_company"
+            android:hint="Dream Company"/>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
