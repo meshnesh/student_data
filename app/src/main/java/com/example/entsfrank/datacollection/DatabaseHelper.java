@@ -21,10 +21,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String CREATE_DB_SQL =
             "CREATE TABLE "+ DataEntry.TABLE_NAME+" ("+
                     DataEntry._ID+" INTEGER PRIMARY KEY, "+
-                    DataEntry.COLUMN_TITLE+DATA_TYPE_TEXT+ DataEntry.COLUMN_DESCRIPTION+
-                    DATA_TYPE_TEXT+ DataEntry.COLUMN_ASSOCIATION+DATA_TYPE_TEXT+
-                    DataEntry.COLUMN_TIME +DATA_TYPE_TEXT+DataEntry.COLUMN_REMINDER+
-                    DATA_TYPE_TEXT+ DataEntry.COLUMN_PURPOSE+" TEXT )";
+                    DataEntry.COLUMN_NAME+DATA_TYPE_TEXT+ DataEntry.COLUMN_AGE+
+                    DATA_TYPE_TEXT+ DataEntry.COLUMN_GENDER+DATA_TYPE_TEXT+
+                    DataEntry.COLUMN_UNIVERSITY +DATA_TYPE_TEXT+DataEntry.COLUMN_JOB+
+                    DATA_TYPE_TEXT+ DataEntry.COLUMN_SALARY+DataEntry.COLUMN_COMPANY+ " TEXT )";
     private static final String DELETE_DB_SQL =
             "DROP TABLE IF EXISTS "+ DataEntry.TABLE_NAME;
 

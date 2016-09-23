@@ -45,6 +45,7 @@ public class InfoFragment extends Fragment {
         TextView association = (TextView) view.findViewById(R.id.single_call_association);
         TextView time = (TextView) view.findViewById(R.id.single_call_time);
         TextView reminder = (TextView) view.findViewById(R.id.single_call_reminder);
+        TextView company = (TextView) view.findViewById(R.id.single_company);
         try{
             this.event = task.execute().get();
             if(event!=null) {
