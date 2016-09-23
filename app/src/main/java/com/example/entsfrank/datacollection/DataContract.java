@@ -9,7 +9,7 @@ public class DataContract {
     private String _name, _age, _gender, _university, _job, _salary, _company;
     private int _id;
 
-    public DataContract(int id, String name, String age, String gender, String university, String job, String salary. String company){
+    public DataContract(int id, String name, String age, String gender, String university, String job, String salary, String company){
         this._name = name;
         this._age=age;
         this._gender =gender;

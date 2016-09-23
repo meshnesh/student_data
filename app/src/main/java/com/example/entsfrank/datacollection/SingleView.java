@@ -15,9 +15,9 @@ public class SingleView extends AsyncTask<Object,Void,DataContract> {
     private DatabaseHelper helper;
     private static String[] projection = {
             DataEntry._ID,
-            DataEntry.COLUMN_TITLE, DataEntry.COLUMN_DESCRIPTION,
-            DataEntry.COLUMN_PURPOSE, DataEntry.COLUMN_ASSOCIATION,
-            DataEntry.COLUMN_TIME, DataEntry.COLUMN_REMINDER
+            DataEntry.COLUMN_NAME, DataEntry.COLUMN_AGE,
+            DataEntry.COLUMN_GENDER, DataEntry.COLUMN_UNIVERSITY,
+            DataEntry.COLUMN_JOB, DataEntry.COLUMN_SALARY,DataEntry.COLUMN_COMPANY
     };
     private String type;
     private String[] selectionArgs;
@@ -65,7 +65,7 @@ public class SingleView extends AsyncTask<Object,Void,DataContract> {
                     cursor.getInt(0), cursor.getString(1),
                     cursor.getString(2), cursor.getString(3),
                     cursor.getString(4), cursor.getString(5),
-                    cursor.getString(6)
+                    cursor.getString(6),cursor.getString(7)
             );
         }
         cursor.close();
