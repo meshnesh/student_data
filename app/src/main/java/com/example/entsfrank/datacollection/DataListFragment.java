@@ -56,7 +56,7 @@ public class DataListFragment extends Fragment {
             getFragmentManager()
                     .beginTransaction()
                     .addToBackStack(null)
-                    .replace(R.id.callContainer, new CreateCallFragment())
+                    .replace(R.id.dataCollectionContainer, new CreateCallFragment())
                     .commit();
         }
     };

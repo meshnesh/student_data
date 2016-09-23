@@ -44,7 +44,7 @@ public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.ViewHo
         vH.eventContainer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(context, SingleCallActivity.class);
+                Intent i = new Intent(context, SingleViewActivity.class);
                 i.putExtra("eventId", (long)(int)view.getTag());
                 context.startActivity(i);
             }
