@@ -5,7 +5,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 
-import com.example.entsfrank.datacollection.DataContract.DataEntry
+import com.example.entsfrank.datacollection.DataContract.DataEntry;
+import com.example.entsfrank.datacollection.DatabaseHelper;
 
 
 /**

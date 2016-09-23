@@ -1,9 +1,10 @@
 package com.example.entsfrank.datacollection;
 
+import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.entsfrank.datacollection.DataContract.DataEntry
+import com.example.entsfrank.datacollection.DataContract.DataEntry;
 
 
 /**
@@ -12,8 +13,9 @@ import com.example.entsfrank.datacollection.DataContract.DataEntry
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "Data.db";
+    private static final String DATABASE_NAME = "University.db";
     private static final String DATA_TYPE_TEXT = " TEXT, ";
+;
 
     //    univeristy Table
     private static final String CREATE_DB_SQL =
@@ -25,6 +27,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     DATA_TYPE_TEXT+ DataEntry.COLUMN_PURPOSE+" TEXT )";
     private static final String DELETE_DB_SQL =
             "DROP TABLE IF EXISTS "+ DataEntry.TABLE_NAME;
+
+    public DatabaseHelper(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    }
 
     @Override
     public void onCreate(SQLiteDatabase db) {

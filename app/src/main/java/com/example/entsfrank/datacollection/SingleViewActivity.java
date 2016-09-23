@@ -12,7 +12,7 @@ public class SingleViewActivity extends AppCompatActivity {
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.singleViewContainer, new CallInfoFragment())
+                .add(R.id.singleViewContainer, new InfoFragment())
                 .commit();
     }
 }

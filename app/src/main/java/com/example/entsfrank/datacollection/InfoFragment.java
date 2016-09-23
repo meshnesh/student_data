@@ -20,6 +20,8 @@ import java.util.concurrent.ExecutionException;
  */
 public class InfoFragment extends Fragment {
 
+    private DataContract event;
+
 
     public InfoFragment() {
         // Required empty public constructor
@@ -30,7 +32,8 @@ public class InfoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_info, container, false);SingleCall task = new SingleCall(
+        View view = inflater.inflate(R.layout.fragment_info, container, false);
+        SingleView task = new SingleView(
                 getActivity(),
                 getActivity().getIntent().getLongExtra("eventId",0),
                 "read",
@@ -53,7 +56,7 @@ public class InfoFragment extends Fragment {
                 reminder.setText(event.getReminder());
                 setHasOptionsMenu(true);
             } else {
-                title.setText(R.string.null_event);
+                title.setText("No events created on this date");
             }
         } catch (InterruptedException|ExecutionException e){
             e.printStackTrace();
@@ -69,9 +72,6 @@ public class InfoFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.edit_action_icon:
-                openEditFrag();
-                return true;
             case R.id.del_action_icon:
                 deleteCall();
                 return true;
@@ -80,27 +80,9 @@ public class InfoFragment extends Fragment {
         }
     }
 
-    public void openEditFrag() {
-        EditCallFragment editFrag = new EditCallFragment();
-        Bundle bundle = new Bundle();
-        bundle.putLong("eventId", event.getId());
-        bundle.putString("title", event.getTitle());
-        bundle.putString("description", event.getDescription());
-        bundle.putString("association", event.getAssociation());
-        bundle.putString("purpose", event.getPurpose());
-        bundle.putString("time", event.getTime());
-        bundle.putString("reminder", event.getReminder());
-        editFrag.setArguments(bundle);
-        FragmentManager fManager = getFragmentManager();
-        fManager.beginTransaction()
-                .replace(R.id.singleCallContainer, editFrag)
-                .addToBackStack(null)
-                .commit();
-
-    }
 
     public void deleteCall(){
-        SingleCall task = new SingleCall(
+        SingleView task = new SingleView(
                 getActivity(), event.getId(),
                 "delete", null
         );
