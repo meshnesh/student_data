@@ -43,7 +43,7 @@ public class DataListFragment extends Fragment {
         ReadData task = new ReadData(getActivity());
         try{
             dataList = task.execute().get();
-            RecyclerView.Adapter adapter = new CallListAdapter(dataList, getActivity());
+            RecyclerView.Adapter adapter = new DataListAdapter(dataList, getActivity());
             recyclerView.setAdapter(adapter);
         } catch (InterruptedException|ExecutionException e){
             e.printStackTrace();
