@@ -40,10 +40,10 @@ public class DataListFragment extends Fragment {
         List<DataContract> dataList;
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-        ReadCalls task = new ReadCalls(getActivity());
+        ReadData task = new ReadData(getActivity());
         try{
-            callList = task.execute().get();
-            RecyclerView.Adapter adapter = new CallListAdapter(callList, getActivity());
+            dataList = task.execute().get();
+            RecyclerView.Adapter adapter = new CallListAdapter(dataList, getActivity());
             recyclerView.setAdapter(adapter);
         } catch (InterruptedException|ExecutionException e){
             e.printStackTrace();
