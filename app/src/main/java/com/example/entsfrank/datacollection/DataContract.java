@@ -19,7 +19,7 @@ public class DataContract {
         this._reminder=reminder;
     }
     public static abstract class DataEntry implements BaseColumns {
-        public static final String TABLE_NAME = "Calls";
+        public static final String TABLE_NAME = "Uni_data";
         public static final String COLUMN_TITLE = "title";
         public static final String COLUMN_DESCRIPTION = "description";
         public static final String COLUMN_ASSOCIATION = "association";
